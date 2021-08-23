@@ -29,7 +29,7 @@ func findMedianSortedArrays(nums1 []int, nums2 []int) float64 {
 		}
 		lastNums = append(lastNums, nums1[i])
 	}
-	if nums2Index<len(nums2) {
+	if nums2Index < len(nums2) {
 		lastNums = append(lastNums, nums2[nums2Index:]...)
 	}
 	fmt.Println(lastNums)

@@ -11,7 +11,7 @@ import . "waterjiao.com/awesome-go-leetcode/kit"
  */
 func deleteDuplicates(head *ListNode) *ListNode {
 	p := head
-	for p != nil && p.Next != nil{
+	for p != nil && p.Next != nil {
 		if p.Val == p.Next.Val {
 			p.Next = p.Next.Next
 		} else {

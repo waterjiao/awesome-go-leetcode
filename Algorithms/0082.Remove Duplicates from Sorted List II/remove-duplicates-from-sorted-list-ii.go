@@ -13,7 +13,7 @@ func deleteDuplicates(head *ListNode) *ListNode {
 	dummy := &ListNode{Next: head}
 	p := dummy
 	num := 0
-	for  p.Next != nil && p.Next.Next != nil{
+	for p.Next != nil && p.Next.Next != nil {
 		if p.Next.Val == p.Next.Next.Val {
 			num = p.Next.Val
 			p.Next = p.Next.Next.Next
@@ -24,7 +24,7 @@ func deleteDuplicates(head *ListNode) *ListNode {
 					break
 				}
 			}
-		}  else {
+		} else {
 			p = p.Next
 		}
 	}

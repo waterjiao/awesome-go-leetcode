@@ -13,7 +13,7 @@ import (
  */
 func middleNode(head *ListNode) *ListNode {
 	slow, fast := head, head
-	for fast.Next!= nil && fast.Next.Next != nil{
+	for fast.Next != nil && fast.Next.Next != nil {
 		fast = fast.Next.Next
 		slow = slow.Next
 	}
@@ -55,7 +55,6 @@ func recorder1(head *ListNode) {
 	l2 = reverseList(l2)
 	head = mergeList(l1, l2)
 }
-
 
 func reorderList(head *ListNode) {
 	if head == nil {

@@ -17,40 +17,26 @@ func copyRandomList(head *Node) *Node {
 	if head == nil {
 		return head
 	}
-	origin, nodes := []*Node{}, []*Node{}
-	random := make(map[*Node]int)
-	for curr := head; curr != nil; curr = curr.Next {
-		origin = append(origin, curr)
-		nodes = append(nodes, &Node{Val: curr.Val})
+	curr := head
+	for curr != nil {
+		newNode := &Node{Val: curr.Val}
+		newNode.Next = curr.Next
+		curr.Next = newNode
+		curr = newNode.Next
 	}
-	for _, c := range origin {
-		for index, q := range origin {
-			if c.Random == q {
-				random[c] = index
-				break
-			} else if c.Random == nil {
-				random[c] = -1
-				break
-			}
-		}
+	curr = head
+	for curr != nil {
+		curr.Next.Random = curr.Random.Next
+		curr = curr.Next.Next
 	}
-	for i:= 0; i< len(origin)-1; i++ {
-		nodes[i].Next = nodes[i+1]
-		r := origin[i].Random
-		v := random[r]
-		if v == -1 {
-			nodes[i].Random = nil
-			continue
-		}
-		nodes[i].Random = nodes[v]
+	curr = &Node{}
+	dummy := curr
+	p := head
+	for p != nil {
+		curr.Next = p.Next
+		curr = curr.Next
+		p.Next = curr.Next
+		p = p.Next
 	}
-	r := origin[len(origin)-1].Random
-	v := random[r]
-	if v == -1 {
-		nodes[len(origin)-1].Random = nil
-	} else {
-		nodes[len(origin)-1].Random = nodes[v]
-	}
-	nodes[len(origin)-1].Next = nil
-	return nodes[0]
+	return dummy.Next
 }

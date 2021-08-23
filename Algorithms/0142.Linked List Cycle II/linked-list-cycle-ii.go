@@ -12,7 +12,6 @@ import (
  * }
  */
 
-
 func detectCycle(head *ListNode) *ListNode {
 	var p, curr *ListNode = nil, head
 	nodes := make(map[*ListNode]struct{})

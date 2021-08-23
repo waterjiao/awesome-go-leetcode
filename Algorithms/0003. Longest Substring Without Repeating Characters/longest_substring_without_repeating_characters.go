@@ -1,7 +1,7 @@
 package problem003
 
 func lengthOfLongestSubstring(s string) int {
-	var tempList = make([]rune,0)
+	var tempList = make([]rune, 0)
 	var maxLen = 0
 	for _, ch := range s {
 		index, v := stringInList(tempList, ch)
