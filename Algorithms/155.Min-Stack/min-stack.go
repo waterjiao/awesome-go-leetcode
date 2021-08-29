@@ -1,4 +1,4 @@
-package _55__Min_Stack
+package _55_Min_Stack
 
 type MinStack struct {
 	items []int
