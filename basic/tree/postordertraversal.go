@@ -28,6 +28,6 @@ func postOrderTraversal(root *kit.TreeNode) []int {
 		node := stack[len(stack)-1]
 		stack = stack[:len(stack)-1]
 		root = node.Right
-		
 	}
+	return result
 }
