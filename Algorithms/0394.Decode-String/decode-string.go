@@ -4,6 +4,7 @@ import (
 	"strconv"
 	"strings"
 )
+
 /**
 解题思路：
 遍历字符串s
@@ -27,7 +28,7 @@ import (
 计算 "accc"+2*"bc"
 ...
 
- */
+*/
 
 func decodeString(s string) string {
 	st := newDecodeStack()

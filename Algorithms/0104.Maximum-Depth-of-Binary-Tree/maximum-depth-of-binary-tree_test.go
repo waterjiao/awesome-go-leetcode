@@ -1,4 +1,4 @@
-package tree
+package _104_Maximum_Depth_of_Binary_Tree
 
 import (
 	"fmt"
@@ -6,7 +6,7 @@ import (
 	"waterjiao.com/awesome-go-leetcode/kit"
 )
 
-func TestPreOrderTraversal(t *testing.T) {
+func TestMax(t *testing.T) {
 	root := &kit.TreeNode{
 		Val: 1,
 		Left: &kit.TreeNode{
@@ -29,7 +29,5 @@ func TestPreOrderTraversal(t *testing.T) {
 		},
 	}
 
-	preorderTraversal(root)
-	fmt.Println()
-	fmt.Print(preOrderTraversal(root))
+	fmt.Print(maxDepth(root))
 }

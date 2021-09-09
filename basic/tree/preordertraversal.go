@@ -14,7 +14,7 @@ func preorderTraversal(root *kit.TreeNode) {
 	preorderTraversal(root.Right)
 }
 
-func preOrderTraversal(root *kit.TreeNode) []int{
+func preOrderTraversal(root *kit.TreeNode) []int {
 	if root == nil {
 		return nil
 	}

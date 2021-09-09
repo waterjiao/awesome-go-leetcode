@@ -11,7 +11,7 @@ package _034_Find_First_and_Last_Position_of_Element_in_Sorted_Array
 返回[-1, -1]
 3、如果nums是空
 返回[-1, -1]
- */
+*/
 func searchRange(nums []int, target int) []int {
 	if len(nums) < 1 {
 		return []int{-1, -1}

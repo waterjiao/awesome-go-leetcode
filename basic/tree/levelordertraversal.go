@@ -16,7 +16,7 @@ func levelOrderTraversal(root *kit.TreeNode) [][]int {
 		list := make([]int, 0)
 		// 取当前新的一层时，队列的长度，后续添加的等到下一层计算时使用
 		l := len(queue)
-		for i := 0; i < l; i ++ {
+		for i := 0; i < l; i++ {
 			// 取队列的头，取出后截取队列，符合队列操作
 			level := queue[i]
 			queue = queue[1:]

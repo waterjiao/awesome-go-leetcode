@@ -8,10 +8,10 @@ import (
 
 func TestMidOrderTraversal(t *testing.T) {
 	root := &kit.TreeNode{
-		Val:   1,
-		Left:  &kit.TreeNode{
-			Val:   2,
-			Left:  &kit.TreeNode{
+		Val: 1,
+		Left: &kit.TreeNode{
+			Val: 2,
+			Left: &kit.TreeNode{
 				Val:   4,
 				Left:  nil,
 				Right: nil,
